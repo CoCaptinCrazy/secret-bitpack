@@ -21,7 +21,7 @@ import (
 	"github.com/google/go-containerregistry/pkg/v1/mutate"
 	"github.com/google/go-containerregistry/pkg/v1/remote"
 	"github.com/google/go-containerregistry/pkg/v1/types"
-	"secret-bitpack/internal/builder/packaging"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/builder/packaging"
 )
 
 const imageRefAnnotation = "org.opencontainers.image.ref.name"

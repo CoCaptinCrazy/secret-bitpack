@@ -8,11 +8,11 @@ import (
 	"os/signal"
 	"strings"
 
-	"secret-bitpack/internal/core"
-	"secret-bitpack/internal/core/bootstrap"
-	devruntime "secret-bitpack/internal/dev/runtime"
-	"secret-bitpack/internal/extensions"
-	"secret-bitpack/internal/orchestration/cluster"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core/bootstrap"
+	devruntime "github.com/CoCaptinCrazy/secret-bitpack/internal/dev/runtime"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/extensions"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/orchestration/cluster"
 )
 
 func Execute(args []string, output io.Writer) error {

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"secret-bitpack/internal/orchestration/kubernetes"
-	"secret-bitpack/internal/runtime/modules"
-	"secret-bitpack/internal/runtime/supervisor"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/orchestration/kubernetes"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/modules"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/supervisor"
 )
 
 type snapshotRecord struct {

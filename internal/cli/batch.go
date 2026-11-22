@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	batchparser "secret-bitpack/internal/batch/parser"
+	batchparser "github.com/CoCaptinCrazy/secret-bitpack/internal/batch/parser"
 )
 
 type batchJob struct {

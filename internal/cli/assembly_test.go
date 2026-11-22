@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"secret-bitpack/internal/orchestration/kubernetes"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/orchestration/kubernetes"
 )
 
 type assemblyRunner struct {

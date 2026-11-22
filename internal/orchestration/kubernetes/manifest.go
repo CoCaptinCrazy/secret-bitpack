@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	assemblyparser "secret-bitpack/internal/assembly/parser"
-	bitpacksecrets "secret-bitpack/internal/security/secrets"
+	assemblyparser "github.com/CoCaptinCrazy/secret-bitpack/internal/assembly/parser"
+	bitpacksecrets "github.com/CoCaptinCrazy/secret-bitpack/internal/security/secrets"
 )
 
 func Compile(assembly *assemblyparser.BPack, secretValues map[string]string) ([]map[string]any, error) {

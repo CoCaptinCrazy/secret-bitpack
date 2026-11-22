@@ -12,11 +12,11 @@ import (
 	"strings"
 	"time"
 
-	assemblyparser "secret-bitpack/internal/assembly/parser"
-	devruntime "secret-bitpack/internal/dev/runtime"
-	"secret-bitpack/internal/orchestration/kubernetes"
-	"secret-bitpack/internal/runtime/modules"
-	bitpacksecrets "secret-bitpack/internal/security/secrets"
+	assemblyparser "github.com/CoCaptinCrazy/secret-bitpack/internal/assembly/parser"
+	devruntime "github.com/CoCaptinCrazy/secret-bitpack/internal/dev/runtime"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/orchestration/kubernetes"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/modules"
+	bitpacksecrets "github.com/CoCaptinCrazy/secret-bitpack/internal/security/secrets"
 )
 
 type assemblyDefinition struct {

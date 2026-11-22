@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"secret-bitpack/internal/builder/blueprints"
-	"secret-bitpack/internal/builder/parser"
-	devruntime "secret-bitpack/internal/dev/runtime"
-	bitpacksecrets "secret-bitpack/internal/security/secrets"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/builder/blueprints"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/builder/parser"
+	devruntime "github.com/CoCaptinCrazy/secret-bitpack/internal/dev/runtime"
+	bitpacksecrets "github.com/CoCaptinCrazy/secret-bitpack/internal/security/secrets"
 )
 
 var validResourceName = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9_.-]*$`)

@@ -1,4 +1,4 @@
-module secret-bitpack
+module github.com/CoCaptinCrazy/secret-bitpack
 
 go 1.23.0
 

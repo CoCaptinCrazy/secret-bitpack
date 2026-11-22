@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"secret-bitpack/internal/builder/packaging"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/builder/packaging"
 )
 
 func bitpackPackage(output io.Writer, args []string) error {

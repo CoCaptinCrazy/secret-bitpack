@@ -9,27 +9,56 @@ limits on the projects it can manage.
 Bitpack runs the commands and toolchains you configure. It does not automatically
 install project runtimes or build/push container images.
 
-## Get started
+## Install Bitpack
 
-Install Bitpack once for your Windows user:
+After the winget submission pull request has been accepted and merged, install
+the CLI with winget:
 
 ```powershell
-.\install.ps1
+winget install BitpackDevelopment.Bitpack
 ```
 
-The installer builds Bitpack and adds its Go binary directory to your user
-`PATH`. Restart your terminal host (restart VS Code too if you use its
-integrated terminal), then use the command directly:
+Or install the latest source with Go:
+
+```sh
+go install github.com/CoCaptinCrazy/secret-bitpack/cmd/bitpack@latest
+```
+
+Prebuilt Windows, macOS, and Linux archives are published on the
+[GitHub Releases page](https://github.com/CoCaptinCrazy/secret-bitpack/releases)
+after the first tagged release. Download the archive matching your OS and
+architecture, extract it, and put the `bitpack` executable (or `bitpack.exe` on
+Windows) in a directory on your `PATH`.
+
+The VS Code extension is attached there as a `.vsix`. Download and install it:
+
+```powershell
+code --install-extension .\bitpack-tools.vsix
+```
+
+Once Marketplace publishing is enabled, install it with:
+
+```powershell
+code --install-extension bitpackdevelopment.bitpack-tools
+```
+
+Install the CLI separately; the extension invokes it from your `PATH`.
+
+For development from a source checkout, run `.\install.ps1` on Windows. It
+builds the CLI and adds the Go binary directory to your user `PATH`. Restart
+your terminal host (and VS Code, if you use its integrated terminal) afterward.
+See [RELEASING.md](RELEASING.md) for the release and publisher setup.
+
+Once installed, run commands directly:
 
 ```powershell
 bitpack help
+bitpack modules
 bitpack forge .\Bitfile
 bitpack assemble my-app
 bitpack verify my-app
 bitpack ignite my-app
 ```
-
-Alternatively, run from source with `go run .\cmd\bitpack help`.
 
 Commands declared by a Bitfile run through the operating-system shell with the
 current user's permissions. Only run project files and commands you trust.

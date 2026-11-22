@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"secret-bitpack/internal/core"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core"
 )
 
 func TestRegistryCommandsReachGoHandlers(t *testing.T) {

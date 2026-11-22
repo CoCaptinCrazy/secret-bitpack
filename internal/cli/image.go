@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	ociimage "secret-bitpack/internal/builder/image"
-	devruntime "secret-bitpack/internal/dev/runtime"
+	ociimage "github.com/CoCaptinCrazy/secret-bitpack/internal/builder/image"
+	devruntime "github.com/CoCaptinCrazy/secret-bitpack/internal/dev/runtime"
 )
 
 func bitpackImage(output io.Writer, args []string) error {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	assemblyparser "secret-bitpack/internal/assembly/parser"
+	assemblyparser "github.com/CoCaptinCrazy/secret-bitpack/internal/assembly/parser"
 )
 
 func TestCompileExampleBPack(t *testing.T) {

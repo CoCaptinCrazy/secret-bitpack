@@ -3,7 +3,7 @@ package manager
 import (
 	"testing"
 
-	"secret-bitpack/internal/runtime/modules"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/modules"
 )
 
 func TestManagerLifecycle(t *testing.T) {

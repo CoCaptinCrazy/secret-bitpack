@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	bitpacksecrets "secret-bitpack/internal/security/secrets"
+	bitpacksecrets "github.com/CoCaptinCrazy/secret-bitpack/internal/security/secrets"
 )
 
 var validID = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9_.-]*$`)

@@ -4,12 +4,14 @@ import (
 	"io"
 	"os"
 
-	"secret-bitpack/internal/core/config"
-	"secret-bitpack/internal/core/events"
-	"secret-bitpack/internal/core/logging"
-	"secret-bitpack/internal/core/state"
-	"secret-bitpack/internal/runtime/manager"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core/config"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core/events"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core/logging"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core/state"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/manager"
 )
+
+var Version = "0.1.17"
 
 type Bitpack struct {
 	Config  *config.Config
@@ -29,7 +31,7 @@ func New(output io.Writer) *Bitpack {
 		Events:  events.New(),
 		Runtime: manager.New(),
 		Output:  output,
-		Version: "0.1.17",
+		Version: Version,
 	}
 }
 

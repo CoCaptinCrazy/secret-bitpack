@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"secret-bitpack/internal/core"
-	"secret-bitpack/internal/orchestration/cluster"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/orchestration/cluster"
 )
 
 func bitpackConfig(bitpack *core.Bitpack, output io.Writer, args []string) error {

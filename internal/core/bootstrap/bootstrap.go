@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"io"
 
-	"secret-bitpack/internal/core"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/core"
 )
 
 type Bootstrap struct{}

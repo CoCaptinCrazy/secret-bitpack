@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"secret-bitpack/internal/dev/parser"
-	"secret-bitpack/internal/runtime/supervisor"
-	bitpacksecrets "secret-bitpack/internal/security/secrets"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/dev/parser"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/supervisor"
+	bitpacksecrets "github.com/CoCaptinCrazy/secret-bitpack/internal/security/secrets"
 )
 
 func Load(path string) (*parser.Environment, string, error) {

@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"secret-bitpack/internal/builder/blueprints"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/builder/blueprints"
 )
 
 func Parse(r io.Reader) (*blueprints.Blueprint, error) {

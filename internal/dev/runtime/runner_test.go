@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"secret-bitpack/internal/dev/parser"
-	"secret-bitpack/internal/runtime/supervisor"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/dev/parser"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/supervisor"
 )
 
 func TestRunSupervisesServicesAndRestartsWatchedCommands(t *testing.T) {

@@ -1,0 +1,51 @@
+{
+  "name": "bitpack-tools",
+  "displayName": "Bitpack CLI",
+  "description": "Run Bitpack CLI commands from the VS Code workspace.",
+  "version": "0.1.17",
+  "publisher": "bitpackdevelopment",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "activationEvents": [
+    "onCommand:bitpack.runCommand"
+  ],
+  "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoCaptinCrazy/secret-bitpack"
+  },
+  "bugs": {
+    "url": "https://github.com/CoCaptinCrazy/secret-bitpack/issues"
+  },
+  "homepage": "https://github.com/CoCaptinCrazy/secret-bitpack",
+  "scripts": {
+    "test": "node --test"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "bitpack.runCommand",
+        "title": "Bitpack: Run Command",
+        "category": "Bitpack"
+      }
+    ],
+    "configuration": {
+      "title": "Bitpack",
+      "properties": {
+        "bitpack.executable": {
+          "type": "string",
+          "default": "bitpack",
+          "description": "Bitpack executable name or absolute path."
+        }
+      }
+    }
+  }
+}

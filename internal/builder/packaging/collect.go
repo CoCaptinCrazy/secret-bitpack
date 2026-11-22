@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"secret-bitpack/internal/ignore"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/ignore"
 )
 
 func CollectDirectory(workspace, excludedPath string) ([]Entry, error) {

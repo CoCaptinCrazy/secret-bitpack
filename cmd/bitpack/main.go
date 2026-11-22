@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"secret-bitpack/internal/cli"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/cli"
 )
 
 func main() {

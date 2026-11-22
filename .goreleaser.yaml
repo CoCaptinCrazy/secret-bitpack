@@ -1,0 +1,67 @@
+version: 2
+project_name: bitpack
+
+builds:
+  - id: bitpack
+    main: ./cmd/bitpack
+    binary: bitpack
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X github.com/CoCaptinCrazy/secret-bitpack/internal/core.Version={{ .Version }}
+
+archives:
+  - id: bitpack
+    ids:
+      - bitpack
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - README.md
+      - LICENSE
+
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
+
+winget:
+  - name: bitpack
+    publisher: Bitpack Development
+    package_identifier: BitpackDevelopment.Bitpack
+    package_name: Bitpack
+    license: MIT
+    license_url: https://github.com/CoCaptinCrazy/secret-bitpack/blob/main/LICENSE
+    homepage: https://github.com/CoCaptinCrazy/secret-bitpack
+    publisher_url: https://github.com/CoCaptinCrazy
+    publisher_support_url: https://github.com/CoCaptinCrazy/secret-bitpack/issues
+    short_description: Polyglot project packaging, development, and deployment CLI
+    description: Bitpack manages language-neutral projects, local development workflows, and Kubernetes deployments.
+    tags:
+      - cli
+      - development
+      - kubernetes
+    ids:
+      - bitpack
+    skip_upload: '{{ if isEnvSet "WINGET_GITHUB_TOKEN" }}false{{ else }}true{{ end }}'
+    repository:
+      owner: CoCaptinCrazy
+      name: winget-pkgs
+      branch: master
+      token: '{{ envOrDefault "WINGET_GITHUB_TOKEN" "" }}'
+      pull_request:
+        enabled: true
+        base:
+          owner: microsoft
+          name: winget-pkgs
+          branch: master

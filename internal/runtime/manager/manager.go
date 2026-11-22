@@ -3,7 +3,7 @@ package manager
 import (
 	"sync"
 
-	"secret-bitpack/internal/runtime/modules"
+	"github.com/CoCaptinCrazy/secret-bitpack/internal/runtime/modules"
 )
 
 type Manager struct {
