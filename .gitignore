@@ -120,6 +120,7 @@ xcuserdata/
 .idea/
 .fleet/
 .vs/
+.vscode/
 .vscode-test/
 .history/
 *.iml
