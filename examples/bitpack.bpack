@@ -1,0 +1,131 @@
+assembly social-network {
+
+    mesh frontend {
+
+        module gateway {
+            blueprint nginx
+
+            replicas 2
+
+            bridge https {
+                host 443
+                target 8443
+            }
+        }
+
+        module web {
+            blueprint social-web
+
+            replicas 3
+
+            depends api
+        }
+    }
+
+    mesh backend {
+
+        module api {
+            blueprint social-api
+
+            replicas 4
+
+            volume uploads {
+                path "/data/uploads"
+            }
+
+            volume logs {
+                path "/data/logs"
+            }
+
+            depends database
+            depends redis
+        }
+
+        module worker {
+            blueprint social-worker
+
+            replicas 2
+
+            depends database
+            depends redis
+        }
+
+        module database {
+            blueprint postgres
+
+            replicas 1
+
+            volume database-data {
+                path "/var/lib/postgresql/data"
+            }
+        }
+
+        module redis {
+            blueprint redis
+
+            replicas 1
+        }
+    }
+
+    firewall {
+
+        rule {
+            source gateway
+            destination api
+            action allow
+        }
+
+        rule {
+            source web
+            destination api
+            action allow
+        }
+
+        rule {
+            source api
+            destination database
+            action allow
+        }
+
+        rule {
+            source api
+            destination redis
+            action allow
+        }
+
+        rule {
+            source web
+            destination database
+            action deny
+        }
+    }
+
+    autoscale {
+
+        target api
+
+        min 4
+
+        max 20
+
+        cpu 75
+    }
+
+    autoscale {
+
+        target web
+
+        min 3
+
+        max 10
+
+        cpu 70
+    }
+
+    policy production {
+
+        restart always
+
+        recovery automatic
+    }
+}

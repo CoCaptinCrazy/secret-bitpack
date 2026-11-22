@@ -1,0 +1,44 @@
+blueprint "social-api" v1.4
+
+using server
+
+bring "./"
+
+env <|
+    APP_ENV = production
+    PORT = 8080
+
+    DATABASE_HOST = database
+    DATABASE_PORT = 5432
+
+    CACHE_HOST = redis
+    CACHE_PORT = 6379
+|>
+
+secret <|
+    db-password
+    jwt-secret
+    smtp-token
+|>
+
+health <|
+    GET /health
+|>
+
+assemble <|
+    npm install
+
+    npm run build
+
+    npm run migrate
+|>
+
+verify <|
+    npm test
+
+    npm run lint
+|>
+
+ignite <|
+    npm start
+|>

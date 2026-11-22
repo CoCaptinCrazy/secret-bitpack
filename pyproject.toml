@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bitpack"
+version = "0.1.0"
+description = "Blueprint-based application packaging and runtime platform"
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    { name = "Bitpack Development" }
+]
+
+keywords = [
+    "containers",
+    "blueprints",
+    "orchestration",
+    "runtime",
+    "deployment"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bitpack*"]
+
+[tool.setuptools.package-data]
+bitpack = [
+    "*.bp",
+    "*.bpack",
+    "*.bpbatch",
+    "*.bpdev",
+    "*.bpackignore",
+    "*.bpkg"
+]

@@ -1,0 +1,26 @@
+development "social-api" v1.0
+
+using node20
+
+workspace "./"
+
+service postgres = postgres -D .bitpack/dev/postgres
+service redis = redis-server
+
+port 3000
+
+watch src/
+watch tests/
+
+env :|
+    APP_ENV = development
+    DEBUG = true
+|:
+
+startup :|
+    npm install
+|:
+
+shell :|
+    npm run dev
+|:

@@ -1,0 +1,62 @@
+# Git
+.git/
+.gitignore
+
+# BitPack
+data/
+*.bp
+*.bpcombine
+
+# Dependencies
+node_modules/
+vendor/
+packages/
+
+# Environment
+.env
+.env.*
+*.secret
+
+# Logs
+logs/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build Output
+dist/
+build/
+out/
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+# Testing
+coverage/
+.pytest_cache/
+
+# Archives
+*.zip
+*.tar
+*.gz
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Keep important files
+!Bitfile
+!README.md

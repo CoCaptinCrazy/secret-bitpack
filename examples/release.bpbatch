@@ -1,0 +1,29 @@
+batch "vice-city-release" v1.0
+
+author:
+    Rockstar North
+
+parallel:
+    true
+
+failfast:
+    true
+
+forge:
+    game-client
+    game-server
+    launcher
+
+verify:
+    unit-tests
+    integration-tests
+
+publish:
+    game-client
+    game-server
+
+assemble:
+    production.bpack
+
+ignite:
+    production

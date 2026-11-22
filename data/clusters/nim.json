@@ -1,0 +1,32 @@
+{
+  "kind": "Cluster",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "nim",
+    "created": 1795368299,
+    "bitpackVersion": "0.1.17"
+  },
+  "status": {
+    "phase": "Pending",
+    "healthy": false
+  },
+  "nodes": [],
+  "assemblies": [],
+  "modules": [],
+  "meshes": [],
+  "snapshots": [],
+  "events": [
+    {
+      "type": "ClusterCreated",
+      "message": "Cluster nim created",
+      "timestamp": 1795368299
+    }
+  ],
+  "metrics": {
+    "nodes": 0,
+    "assemblies": 0,
+    "modules": 0,
+    "meshes": 0,
+    "snapshots": 0
+  }
+}
